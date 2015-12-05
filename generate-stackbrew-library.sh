@@ -31,7 +31,7 @@ if [ "$commitCount" ] && [ "$commitCount" -gt 0 ]; then
 	git log --format=format:'- %h %s%n%w(0,2,2)%b' "$commitRange" | sed 's/^/#  /'
 fi
 
-arch="$(dpkg --print-architecture)"
+arch="arm64"
 for version in "${versions[@]}"; do
 	commit="$(git log -1 --format='format:%H' -- "$version")"
 	serial="$(awk -F '=' '$1 == "SERIAL" { print $2 }' "$version/build-info.txt")"
