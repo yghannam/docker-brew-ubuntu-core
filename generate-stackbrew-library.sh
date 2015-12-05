@@ -13,10 +13,10 @@ cd "$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 versions=( */ )
 versions=( "${versions[@]%/}" )
-url='git://github.com/tianon/docker-brew-ubuntu-core'
+url='git://github.com/yghannam/docker-brew-ubuntu-core'
 
 cat <<-'EOH'
-# maintainer: Tianon Gravi <tianon@debian.org> (@tianon)
+# maintainer: Yazen Ghannam <yazen.ghannam@linaro.org> (@yghannam)
 # proxy for upstream's official builds
 # see https://partner-images.canonical.com/core/
 
